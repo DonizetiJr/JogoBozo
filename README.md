@@ -29,9 +29,40 @@ seja, os dados têm todos os números de 1 a 5 ou de 2 a 6, valendo
 20 pontos. A terceira é a posição da quadra (30 pontos) e a última
 da quina, que vale 40 pontos.
 
+## Classe Dado
+
+Simula um dado de número de lados variados.
+Ao criar o objeto é possível estabelecer o
+número de lados. A rolagem do dado é feita por
+meio de um gerador de números aleatórios
+(Random).
+
+## Classe RolaDado
+
+Essa é uma classe auxiliar que permite
+gerencia um conjunto de vários dados
+simultaneamente. Operações como rolar
+alguns dos dados ou exibir o resultado de
+todos eles, são implementadas.
+
+## Classe Placar
+
+Esta classe representa o placar de um jogo de
+Bozó. Permite que combinações de dados
+sejam alocadas às posições e mantém o
+escore de um jogador.
+
 ## Bozo.main
 
-Bozo.Main
+- Essa é a classe inicial do programa Bozó.
+Possui apenas o método main, que cuida da
+execução do jogo.
+- Depois de implementar as classes Dado,
+Roladados e Placar, resta implementar a
+sequência de passos para que o jogo
+efetivamente se realize.
+
+### Bozo.Main
 Criar um objeto RolaDados e um objeto Placar
 Repetir 10 vezes (uma vez por rodada)
     Pedir para o usuário pressinar ENTER para iniciar a rodada
