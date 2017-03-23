@@ -9,20 +9,20 @@ Em seguida pode, se quiser, escolher mais uma vez
 alguns dos dados para lançar de novo.
 
 - Ao final, deve escolher qual a posição do tabuleiro
-irá preencher. Uma posição já preenchida em rodada
+irá preencher. Uma posição já preenchida numa rodada
 anterior, não pode ser utilizada de novo. A pontuação
 obtida depende da posição escolhida e da
-configuração final dos dados. 
+configuração final dos dados.
 
 - Nas posições externas devem ser colocadas as somas dos dados
 que apreesentam os números correspondentes à posição
-escolhida. Por exeplo, se o jogado seleciona a posição “# 3” e nos
-dados consguiu tirar 4 dados com a pontuação 3, então o valor a
+escolhida. Por exemplo, se o jogador seleciona a posição “# 3” e nos
+dados conseguiu tirar 4 dados com a pontuação 3, então o valor a
 ser colocado é 12.
 
 - Nas posições internas, o jogador recebe uma pontuação fixa, se
 conseguir determina configuração dos dados e zero se os dados
-não apresentarem tal configuração. A primeira posição é um “full
+não apresentarem tal configuração. A primeira (posição é um “full
 hand” ou seja, três dados de determinado número e dois de outro
 (ou do mesmo) e vale 15 pontos. A segunda é uma sequência, ou
 seja, os dados têm todos os números de 1 a 5 ou de 2 a 6, valendo
@@ -49,8 +49,8 @@ todos eles, são implementadas.
 
 Esta classe representa o placar de um jogo de
 Bozó. Permite que combinações de dados
-sejam alocadas às posições e mantém o
-escore de um jogador.
+sejam alocadas às posições e mantém a
+pontuação de um jogador.
 
 ## Bozo.main
 
@@ -58,7 +58,7 @@ escore de um jogador.
 Possui apenas o método main, que cuida da
 execução do jogo.
 - Depois de implementar as classes Dado,
-Roladados e Placar, resta implementar a
+RolaDados e Placar, resta implementar a
 sequência de passos para que o jogo
 efetivamente se realize.
 
