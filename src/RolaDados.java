@@ -19,5 +19,5 @@ public class RolaDados {
   public String toString() {
 
   }
-  
+
 }
