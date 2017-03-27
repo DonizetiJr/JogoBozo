@@ -7,8 +7,8 @@ public class Bozo {
   }
 
   public static void main(String[] args) throws IOException {
-      Dado dice = new Dado();
+      Placar placar = new Placar();
 
-      System.out.println(dice);
+      System.out.println(placar);
   }
 }
