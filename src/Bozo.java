@@ -1,5 +1,9 @@
 import java.io.IOException;
 
+/**
+* @author Edylson T. & Donizeti Jr.
+*
+*/
 public class Bozo {
 
   public Bozo() {

@@ -1,6 +1,14 @@
 import java.lang.IllegalArgumentException;
 
+/**
+* @author Edylson T. & Donizeti Jr.
+* Esta classe representa o placar de um jogo de Bozó.
+* Ela permite a visualização da pontuação de um jogador.
+*/
 public class Placar {
+    /**
+    * Representa a pontuação em dada posição
+    */
     private int[] pontos;
 
     // constantes
@@ -14,10 +22,22 @@ public class Placar {
     public static final int PONTUACAO_QUADRA = 30;
     public static final int PONTUACAO_QUINA = 40;
 
+    /**
+    * Inicializa o placar com 10 posições disponíveis.
+    */
     public Placar() {
         this.pontos = new int[10];
     }
 
+    /**
+    * Adiciona uma pontuação em uma posição do placar. As regras para calcular
+    *   cada pontuação varia de acordo com a posição escolhida.
+    * @param posicao a posição na qual o jogador quer inserir sua pontuação
+    * @param dados os dados rolados pelo jogador. Utilizados para o cálculo
+    *   com base na posição
+    * @throws IllegalArgumentException Caso a posição já esteja ocupada ou fora do intervalo
+    *   de dados[]
+    */
     public void add(int posicao, int[] dados) throws IllegalArgumentException {
         if (posicao < 1 || posicao > this.pontos.length) {
             throw new IllegalArgumentException("Posição fora do intervalo do vetor");
@@ -80,6 +100,10 @@ public class Placar {
         }
     }
 
+    /**
+    * Calcula o valor do placar
+    * @return a soma de todos os pontos.
+    */
     public int getScore() {
         int somaPontos = 0;
 
@@ -90,9 +114,18 @@ public class Placar {
     }
 
     private boolean estaOcupada(int posicao) {
+        if (posicao < 0 || posicao > this.pontos.length-1) {
+            throw new IllegalArgumentException("Posição fora do intervalo do vetor");
+        }
+
         return (this.pontos[posicao] != 0);
     }
 
+    /**
+    * Gera uma string em formato de um placar de Bozó.
+    * @return string contendo todas as pontuações.
+    */
+    @Override
     public String toString() {
         String str = "";
 
