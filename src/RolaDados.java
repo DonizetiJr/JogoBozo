@@ -22,7 +22,7 @@ public class RolaDados {
 	  int[] r = new int[this.dados.length];
 	  
 	  for (int i = 0; i < r.length; i++) {
-		r[i] = this.dados[i].rola();
+		r[i] = this.dados[i].rolar();
 	  }
 	  
 	  return r;
@@ -33,9 +33,11 @@ public class RolaDados {
   public int[] rolar(boolean[] quais) {
 	  int[] r = new int[this.dados.length];
 	  
-	  for (int i = 0; i < quais.length; i++) {
+	  for (int i = 0; i < r.length; i++) {
 		if (quais[i] == true) {
-			r[i] = this.dados[i].rola();
+			r[i] = this.dados[i].rolar();
+		} else {
+			r[i] = this.dados[i].getLado();
 		}
 	  }
 	  
@@ -45,22 +47,35 @@ public class RolaDados {
 
   // s - É um String que possui o número dos dados a serem rolados.
   public int[] rolar(String s) {
-//	  int num = Integer.parseInt(s);
-//	  int[] r = new int[this.dados.length];
-//	  String[] splited = s.split("\\s+");
-//	  int num = slited.length();
-//	  
-//	  for (int i = 0; i < num; i++) {
-//		r[Integer.parseInt(splited[i])] = Integer.parseInt(splited[i]);
-//	  }
-//	  
-//	  return r;
+	  int count = 0;
+	  int[] r = new int[this.dados.length];
+	  
+	  String[] splited = s.split("\\s+");
+	  
+	  for (int i = 0; i < r.length; i++) {
+		  if (i == Integer.parseInt(splited[count])) {
+			  r[i] = this.dados[i].rolar();
+			  count++;
+		  } else {
+			  r[i] = this.dados[i].getLado();
+		  }
+	  }
+	  
+	  return r;
 
   }
 
   // Usa a representação em string do dados, para mostrar o valor de todos os dados do conjunto.
   public String toString() {
-
+	  int num = this.dados.length;
+	  String resultados = "";
+	  
+	  for (int i = 0; i < num; i++) {
+		resultados += this.dados[i].toString();
+		resultados += "\t";
+	  }
+	  
+	  return resultados;
   }
 
 }
