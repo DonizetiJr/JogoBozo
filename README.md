@@ -22,7 +22,7 @@ ser colocado é 12.
 
 - Nas posições internas, o jogador recebe uma pontuação fixa, se
 conseguir determina configuração dos dados e zero se os dados
-não apresentarem tal configuração. A primeira (posição é um “full
+não apresentarem tal configuração. A primeira posição é um “full
 hand” ou seja, três dados de determinado número e dois de outro
 (ou do mesmo) e vale 15 pontos. A segunda é uma sequência, ou
 seja, os dados têm todos os números de 1 a 5 ou de 2 a 6, valendo
