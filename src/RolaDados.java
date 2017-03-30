@@ -79,30 +79,32 @@ public class RolaDados {
   /**
   * Usa a representação em string do dados, para mostrar o valor de todos os dados do conjunto.
   */
-  @Override
-  public String toString() {
-      String r = "";
-      String[][] str = new String[this.dadosc][];
-      
-      for (int i = 0; i < dadosc; i++) {
-    	  str[i] = this.dados[i].toString().split("\\n");
-      }
-      
-      for (int i = 0; i < dadosc; i++) {
-		r += i + 1;
-		r += "       ";
-      }
-      
-      for (int i = 0; i < str.length; i++) {
-		for (int j = 0; j < dadosc; j++) {
-			r += str[j][i];
-		}
-		r += '\n';
-      }
-      
-      r += '\n';
-      return r;
-  }
- 
+    @Override
+    public String toString() {
+        String r = "";
+        String[][] str = new String[this.dadosc][];
+
+        for (int i = 0; i < dadosc; i++) {
+           str[i] = this.dados[i].toString().split("\\n");
+        }
+
+        for (int i = 0; i < dadosc; i++) {
+            r += i + 1;
+            r += "            ";
+        }
+
+        r += "\n";
+
+        for (int i = 0; i < str.length; i++) {
+            for (int j = 0; j < dadosc; j++) {
+              	r += str[j][i];
+            }
+
+            r += '\n';
+        }
+
+        r += '\n';
+        return r;
+    }
 
 }

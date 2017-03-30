@@ -130,15 +130,15 @@ public class Placar {
         String str = "";
 
         for (int i = 0; i < 3; i++) {
-            str += estaOcupada(i+0) ? this.pontos[i+0+1]+"\t" : "("+(i+0+1)+")\t";
-            str += estaOcupada(i+6) ? "|\t"+this.pontos[i+6+1]+"\t|" : "|\t("+(i+6+1)+")\t|";
-            str += estaOcupada(i+3) ? "\t"+this.pontos[i+3+1]+"\n" : "\t("+(i+3+1)+")\n";
+            str += estaOcupada(i+0) ? this.pontos[i+0]+"\t" : "("+(i+1)+")\t";
+            str += estaOcupada(i+6) ? "|\t"+this.pontos[i+6]+"\t|" : "|\t("+(i+7)+")\t|";
+            str += estaOcupada(i+3) ? "\t"+this.pontos[i+3]+"\n" : "\t("+(i+4)+")\n";
             str += "-----------------------------------\n";
         }
 
         str += estaOcupada(9) ?
         "\t|\t"+this.pontos[9]+"\t|\t\n" :
-        "\t|\t"+"(9)"+"\t|\t   \n";
+        "\t|\t"+"(10)"+"\t|\t   \n";
 
         return str;
     }

@@ -21,9 +21,8 @@ public class Bozo {
 			System.out.println("Enter para inciar a rodada.");
 			EntradaTeclado.leString();
 			dados = rd.rolar();
-			System.out.println(dados);
 			
-			System.out.println("Digite os números dos dados a serem rolados:");
+			System.out.println("Digite os números dos dados a serem rolados: ");
 			
 			while (true) {
 				try {
@@ -34,9 +33,10 @@ public class Bozo {
 					System.out.println("Entrada inválida, digite novamente: ");
 				}
 			}
+
 			System.out.println(rd);
-			
-			System.out.println("Digite os números dos dados a serem rolados:");
+			System.out.println("Digite os números dos dados a serem rolados: ");
+
 			while (true) {
 				try {
 					str = EntradaTeclado.leString();
@@ -46,26 +46,23 @@ public class Bozo {
 					System.out.println("Entrada Inválida.");
 				}
 			}
+
 			System.out.println(rd);
-			
-			System.out.println("Placar atual: " + placar);
-			
+			System.out.println("Placar atual: \n" + placar);
 			System.out.println("Selecione uma posição: ");
 			
 			while (true) {
 				try {
 					tmp = EntradaTeclado.leInt();
-					placar.add(tmp-1, dados);
-					if (tmp > 10 || tmp < 1) {
-						throw new IllegalArgumentException("");
-					}
+					placar.add(tmp, dados);
 					break;
 				} catch (IllegalArgumentException e) {
-					System.out.println("Posição inválida.");
+					System.out.println(e.getMessage());
 				}
 			}
+        System.out.println("Score: " + placar.getScore());
 			
-			System.out.println("Novo placar: " + placar);
+			System.out.println("Novo placar: \n" + placar);
 		}
         
         System.out.println("Score: " + placar.getScore());
