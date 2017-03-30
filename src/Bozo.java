@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 /**
-* @author Edylson T. & Donizeti Jr.
+* @author Edylson T.(5248962) & Donizeti Jr.(9393882)
 */
 public class Bozo {
 
@@ -9,6 +9,9 @@ public class Bozo {
 
     }
 
+    /**
+    * Execução do jogo do bozó
+    */
     public static void main(String[] args) throws IOException {
         Placar placar = new Placar();
         RolaDados rd = new RolaDados(5);
