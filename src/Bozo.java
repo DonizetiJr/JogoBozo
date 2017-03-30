@@ -21,7 +21,8 @@ public class Bozo {
 			System.out.println("Enter para inciar a rodada.");
 			EntradaTeclado.leString();
 			dados = rd.rolar();
-			
+
+			System.out.println(rd);
 			System.out.println("Digite os números dos dados a serem rolados: ");
 			
 			while (true) {
