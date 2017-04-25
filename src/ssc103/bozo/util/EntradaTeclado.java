@@ -1,3 +1,4 @@
+package ssc103.bozo.util;
 
 
 import java.io.BufferedReader;

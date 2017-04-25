@@ -1,3 +1,5 @@
+package ssc103.bozo.dados;
+
 public class RolaDados {
 
   private Dado[] dados;

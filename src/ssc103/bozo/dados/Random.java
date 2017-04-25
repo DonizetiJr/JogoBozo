@@ -1,3 +1,4 @@
+package ssc103.bozo.dados;
 import java.util.Calendar;
 
 public class Random {
